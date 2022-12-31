@@ -13,9 +13,11 @@ class Language {
 class LanguageList {
   static final _langs = {
     'auto': 'Automatic',
+    'am':"Amharic",
+    'om':"Oromo",
+    'ti':"Tigrinya",
     'af': 'Afrikaans',
     'sq': 'Albanian',
-    'am': 'Amharic',
     'ar': 'Arabic',
     'hy': 'Armenian',
     'az': 'Azerbaijani',
