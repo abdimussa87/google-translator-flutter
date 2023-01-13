@@ -14,7 +14,7 @@ part './model/translation.dart';
 /// [author] Gabriel N. Pacheco.
 ///
 class GoogleTranslator {
-  var _baseUrl = 'translate.google.com'; // faster than translate.google.com
+  var _baseUrl = 'translate.googleapis.com'; // faster than translate.google.com
   final _path = '/translate_a/single';
   final _tokenProvider = GoogleTokenGenerator();
   final _languageList = LanguageList();
