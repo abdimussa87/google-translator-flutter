@@ -14,7 +14,7 @@ part './model/translation.dart';
 /// [author] Gabriel N. Pacheco.
 ///
 class GoogleTranslator {
-  var _baseUrl = 'translate.googleapis.com'; // faster than translate.google.com
+  var _baseUrl = 'translate.google.com'; // faster than translate.google.com
   final _path = '/translate_a/single';
   final _tokenProvider = GoogleTokenGenerator();
   final _languageList = LanguageList();
@@ -23,8 +23,7 @@ class GoogleTranslator {
   GoogleTranslator({this.client = ClientType.siteGT});
 
   /// Translates texts from specified language to another
-  Future<Translation> translate(String sourceText,
-      {String from = 'auto', String to = 'en'}) async {
+  Future<Translation> translate(String sourceText, {String from = 'auto', String to = 'en'}) async {
     for (var each in [from, to]) {
       if (!LanguageList.contains(each)) {
         throw LanguageNotSupportedException(each);
@@ -82,8 +81,7 @@ class GoogleTranslator {
   }
 
   /// Translates and prints directly
-  void translateAndPrint(String text,
-      {String from = 'auto', String to = 'en'}) {
+  void translateAndPrint(String text, {String from = 'auto', String to = 'en'}) {
     translate(text, from: from, to: to).then(print);
   }
 
